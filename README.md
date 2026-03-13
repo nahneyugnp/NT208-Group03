@@ -1,4 +1,4 @@
-<img width="1850" height="1005" alt="image" src="https://github.com/user-attachments/assets/cd5a80b1-23f9-4238-90ae-5daf05e62fe1" /># BÁO CÁO BÀI TẬP 7 - NHÓM 3
+# BÁO CÁO BÀI TẬP 7 - NHÓM 3
 
 - GVHD: Nghi Hoàng Khoa
 - Sinh viên thực hiện:
