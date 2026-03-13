@@ -5,7 +5,7 @@
     + 24520213 - Hoàng Ngọc Uyên Chi
     + 24520450 - Nguyễn Ngọc Hân
 
-## Các lỗi xuất hiện trong source code.
+## Các lỗi xuất hiện trong source code
 ### Nhóm lỗi syntax:
 1. File customers.php: lỗi thiếu dấu ngoặc vuông đóng mảng khi truy cập phần tử:
     ```
@@ -41,21 +41,21 @@
     if ($order['status'] === 'completed').
     ```
 
-3. File dashboard.php: Hiển thị sai danh sách "Low shelf SKUs". Dùng điều kiện $product['stock'] < 1 (hết sạch hàng) nên không hiển thị được các món sắp hết (như Campus Gel Pen tồn kho 1).
+3. File dashboard.php: Hiển thị sai danh sách "Low shelf SKUs". Dùng điều kiện $product['stock'] < 1 (hết hàng) nên không hiển thị được các món sắp hết.
 
     => Đổi điều kiện cảnh báo thành < 5.
 
 4. File orders.php: Bảng hàng chờ lấy (Pickup queue) liệt kê sai dữ liệu. Vòng lặp đang lọc ra các đơn hàng đã hoàn thành (completed).
 
-    => Đổi chuỗi so sánh thành 'pending' (hoặc 'waiting') để hiển thị đúng đơn hàng chờ.
+    => Đổi chuỗi so sánh thành 'pending' để hiển thị đúng đơn hàng chờ.
 
-5. File reports.php: Báo cáo tồn kho (Shelf report) gom nhóm sai. Đang sử dụng tên sản phẩm ($product['name']) làm key để nhóm, khiến báo cáo bị xé lẻ.
+5. File reports.php: Báo cáo tồn kho (Shelf report) gom nhóm sai. Đang sử dụng tên sản phẩm ($product['name']) làm key để nhóm, khiến báo cáo bị sai.
 
     => Đổi lại thành dùng đúng trường danh mục: 
     ```
     $category = $product['category'];.
     ```
-## Kết quả chạy được sau khi sửa lỗi:
+## Kết quả chạy được sau khi sửa lỗi
 <img width="1850" height="1005" alt="image" src="https://github.com/user-attachments/assets/a4264f2d-3922-4cbc-bfcd-5ec3d86aa212" />
 <img width="1850" height="1005" alt="image" src="https://github.com/user-attachments/assets/cb20a1db-f2f0-45a7-b608-67cb5c0c8e6a" />
 <img width="1850" height="1005" alt="image" src="https://github.com/user-attachments/assets/d2bea392-734e-4340-bb97-52313c13aa66" />
